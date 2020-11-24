@@ -302,7 +302,7 @@ category_type three_of_a_kind( cards_vec &cards ) {
 
     std::rotate( cards.begin(), it, it + 3 );
 
-    if ( cards.size() > 5 )
+    while ( cards.size() > 5 )
         cards.pop_back();
 
     sort_by_suits( cards.begin(), cards.begin() + 3 );
